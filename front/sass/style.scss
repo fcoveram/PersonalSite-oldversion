@@ -1,0 +1,367 @@
+// Margins and Paddings
+// ---------------
+$ubase: 10px;
+
+// Colors
+// ---------------
+$brown: #C50000;
+$black: #000;
+$gray-a: #A0A0A0;
+$gray: #000;
+$gray-bck: #FEDC32;
+// amarillo: #FEDC32
+// gris: #E0E3E5
+// gris texto: #505050
+// café: #C64607
+// rojo: #C50000
+// rosado: #B11A8D
+
+// Font and sizes
+$serif: 'Playfair Display';
+$no-serif: Arial; 
+$h1: 70px;
+$h2: 50px;
+$h3: 45px;
+$h4: 36px;
+$h5: 27px;
+$p-size: 18px;
+$p-small-size: 16px;
+$p-info: 14px;
+
+body {
+	font-family: $no-serif, serif;
+	background-color: $gray-bck;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $serif, serif;
+	font-style: italic;
+	font-weight: 900;
+}
+
+h1 { font-size: $h1; line-height: 110%; }
+h2 { font-size: $h2; line-height: 100%; }
+h3 { font-size: $h3; line-height: 100%; }
+h4 { font-size: $h4; line-height: 100%; }
+h5 { font-size: $h5; line-height: 100%; }
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin black-link {
+	a {
+		color: $black;
+		&:hover {
+			color: $gray-bck;
+			background-color: $black;
+		}
+	}
+}
+
+@mixin brown-link {
+	a {
+		color: $brown;
+		&:hover {
+			color: $gray-bck;
+			background-color: $brown;
+		}
+	}	
+}
+
+ul, li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.main-nav {
+	margin: $ubase*6 0 $ubase*10;
+	font-size: $p-size;
+	@include black-link;
+	.links-nav a {
+	    padding: $ubase*2;
+	}
+	.home {
+		padding-left: -55px;
+		list-style: none;
+		li a:hover {
+			font-size: 40px;
+			background-color: $gray-bck;
+			color: $black;
+			position: absolute;
+			margin-top: -17px;
+		}
+		li a:before {
+			content: "";
+			display: block;
+			position: absolute;
+			margin-left: -70px;
+			margin-top: -15px;
+			width: 100px;
+			height: 60px;
+			background: transparent url(../img/icon-me.svg) no-repeat;
+		}
+		li a:hover:before {
+			margin-left: -81px;
+			margin-top: -13px;
+			height: 80px;
+			background: transparent url(../img/icon-me-hi.svg) no-repeat;
+		}
+	}
+	.link-home {
+		li a:hover {
+			font-size: 40px;
+			background-color: $gray-bck;
+			color: $black;
+			position: absolute;
+			margin-top: -17px;
+		}
+		li a:before {
+			content: "";
+			display: block;
+			position: absolute;
+			margin-left: -60px;
+			margin-top: -8px;
+			width: 100px;
+			height: 60px;
+			background: transparent url(../img/flecha.svg) no-repeat;
+		}
+		li a:hover:before {
+			margin-top: 9px;
+		}
+	}
+}
+
+
+
+.article-post {
+	h1, h2, h3 {
+		font-family: $serif;
+		line-height: 110%;
+		padding: 0;
+		margin: 0;
+		@include black-link;
+		a {
+			color: $black;
+			font-weight: 900;
+		}
+	}
+	.main-illustration {
+		margin-bottom: $ubase*9;
+	}
+	.info-post {
+		margin-top: $ubase*2;
+		font-size: $p-info;
+		line-height: 22px;
+		font-weight: bold;
+		.type-post {
+			margin-left: $ubase/2;
+			padding: $ubase/2;
+			color: $brown;
+			&:hover {
+				color: $gray-bck;
+				background-color: $brown;
+			}
+		}
+	}
+}
+
+.content-post {
+	color: $gray;
+	margin: $ubase*4 0;
+	font-size: $p-size;
+	line-height: 170%;
+	@include brown-link;
+	p {
+		margin: 0 0 $ubase*3 0;
+	}
+	h2, h3, h4 {
+		color: $black;
+		margin-top: $ubase*7;
+		margin-bottom: $ubase*4;
+	}
+	img {
+		margin-top: $ubase;
+		margin-bottom: $ubase*4;
+	}
+	.border {
+		border: $ubase solid white;
+	}
+	blockquote {
+		color: $black;
+		margin: $ubase*6 0;
+		p {
+			font-family: $serif;
+			font-size: $h4;
+			line-height: 150%;
+			font-style: italic;
+			margin-bottom: $ubase/2;
+			a {
+				font-weight: 100;
+			}
+		}
+		span {
+			font-size: $p-info;
+			font-weight: bold;
+		}
+	}
+
+}
+
+.references {
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	font-size: $p-small-size;
+	font-style: italic;
+	padding: $ubase*5 0;
+	@include brown-link;
+	ul li {
+		list-style-type: decimal;
+		margin-bottom: $ubase;
+		margin-left: $ubase*2;
+	}
+	h4 {
+		margin: 0 0 $ubase*3;
+	}
+}
+
+.related-posts {
+	@include brown-link;
+	a {
+		display: block;
+	}
+	ul li {
+		margin-bottom: $ubase*2;
+		h5 {
+			margin: 0;
+		}
+	}
+}
+
+.works-list {
+	.work-item {
+		background-color: $gray-bck;
+		border: $ubase solid white;
+		margin-bottom: $ubase*8;
+		padding: 0;
+		defs text {
+			font-family: $serif;
+			font-style: italic;
+			font-size: $h1; line-height: 110%; font-weight: 900;
+			word-wrap: break-word;
+			width: 100px;
+		}
+		h1 {
+			margin: $ubase*10 0 0 0;
+		}
+		ul {
+			margin: $ubase*10 0 $ubase*4;
+			li {
+				margin-right: $ubase*2;
+				&:last-child {
+					margin-right: 0; 
+				}
+			}
+		}
+	}
+}
+
+.articles-list {
+	.article-item {
+		padding-bottom: $ubase*6;
+	}
+}
+
+.work-post {
+	@include brown-link;
+	h1 {
+		margin: 0;
+	}
+	.gallery {
+		margin: 0;
+		figcaption {
+			padding: $ubase*8 $ubase*10;
+			background-color: white;
+			margin-bottom: $ubase*3;
+			p {
+				margin: 0 0 $ubase*3 0;
+				line-height: 170%;
+			}
+		}
+		img {
+			margin-bottom: $ubase*4;
+			border: $ubase solid white;
+		}
+	}
+	.content-post {
+		font-size: $p-small-size;
+		line-height: 170%;
+		.info-related {
+			font-weight: bold;
+			strong {
+				color: $black;
+			}
+			aside {
+				margin-top: $ubase*3;
+				padding-top: $ubase*3;
+				border-top: 1px solid $black;
+				h5 {
+					margin: 0 0 $ubase*2 0;
+				}
+			}
+		}
+	}
+}
+
+.about-me {
+	margin-top: 0;
+	h1, h2, h3 {
+		margin: 0 0 $ubase*3 0;
+	}
+	img {
+		margin: 0;
+	}
+	.info-about {
+		padding-left: $ubase*3;
+		.projects {
+			margin-top: $ubase*7; 
+		}
+	}
+}
+
+.svg-mask {
+	clip-path: url(#text-path);
+	-webkit-clip-path: url(#text-path);
+}
+
+.footer {
+	margin: $ubase*5 0;
+	font-size: $p-info;
+	font-weight: bold;
+	a {
+		padding: $ubase $ubase+5;
+	}
+	.language {
+		@include brown-link;
+	}
+	.contact ul li {
+		margin-right: $ubase*3;
+	}
+	.networks ul li {
+		// margin-left: $ubase*3;
+		.dribbble { color: $brown; &:hover { color: white; background-color: #EA4C89 } }
+		.linkedin { color: $brown; &:hover { color: white; background-color: #007bb6 } }
+		.quora { color: $brown; &:hover { color: white; background-color: #A82400 } }
+		/* a { 
+			padding: $ubase $ubase+5;
+		} */
+	}
+}
