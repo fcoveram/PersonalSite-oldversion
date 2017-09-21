@@ -1,116 +1,34 @@
-// Responsive
-// ---------------
-
-$break-small : 640px;
-$break-large: 1240px;
- 
-@mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: $break-small) { @content; }
-    @media only screen and (min-width: $break-small) {
-  		.left-large {
-    		float: left;
-  		}
-  	}
-  	@media only screen and (min-width: $break-small) {
-		.right-large {
-	    	float: right;
-		}
-	}
-  }
-  @else if $media == medium-screens {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
-  }
-  @else if $media == wide-screens {
-    @media only screen and (min-width: $break-large) { @content; }
-  }
-}
-
-// Margins and Paddings
-// ---------------
+// Units
 $ubase: 10px;
 
-// Colors
-// ---------------
-$brown: #C50000;
-$black: #000;
-$gray-a: #A0A0A0;
-$gray: #000;
-$gray-bck: #E0E3E5;
-// amarillo: #FEDC32
-// gris: #E0E3E5
-// gris texto: #505050
-// café: #C64607
-// rojo: #C50000
-// rosado: #B11A8D
+// Background colors
+$light-gray: #F0F0F0;
+$mid-gray: #D7D7D7;
 
-// Font and sizes
+// Font colors
+$regular-gray: #AAAAAA;
+$dark-gray: #505050;
+$brown: #E48E02;
+
+// Fonts
 $serif: 'Playfair Display';
-$no-serif: "lft-etica"; 
+$no-serif: Arial;
 $h1: 70px;
 $h2: 50px;
-$h3: 45px;
-$h4: 36px;
-$h5: 27px;
-
-$h1-m: 40px;
-$h2-m: 36px;
-$h3-m: 31px;
-$h4-m: 28px;
-$h5-m: 24px;
-
+$h3: 40px;
+$h4: 26px;
+$h5: 23px;
 $p-size: 20px;
 $p-small-size: 16px;
 $p-info: 14px;
 
-$p-info-m: 12px;
-
 body {
-	font-family: $no-serif, serif;
-	background-color: $gray-bck;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  color: $dark-gray;
+  font-size: $p-size;
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: $serif, serif;
-	font-style: italic;
-	font-weight: 900;
-}
-
-h1 { font-size: $h1; line-height: 110%; @include respond-to(handhelds) { font-size: $h1-m; } }
-h2 { font-size: $h2; line-height: 100%; @include respond-to(handhelds) { font-size: $h2-m; } }
-h3 { font-size: $h3; line-height: 100%; @include respond-to(handhelds) { font-size: $h3-m; } }
-h4 { font-size: $h4; line-height: 100%; @include respond-to(handhelds) { font-size: $h4-m; } }
-h5 { font-size: $h5; line-height: 100%; @include respond-to(handhelds) { font-size: $h5-m; } }
-
-a {
-	text-decoration: none;
-	font-weight: bold;
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-@mixin black-link {
-	a {
-		color: $black;
-		&:hover {
-			color: $gray-bck;
-			background-color: $black;
-		}
-	}
-}
-
-@mixin brown-link {
-	a {
-		color: $brown;
-		&:hover {
-			color: $gray-bck;
-			background-color: $brown;
-		}
-	}	
+p {
+  margin: 3*$ubase 0;
 }
 
 ul, li {
@@ -119,414 +37,214 @@ ul, li {
 	margin: 0;
 }
 
-.main-nav {
-	margin: $ubase*6 0 $ubase*10;
-	font-size: $p-size;
-	@include black-link;
-	.links-nav a {
-	    padding: $ubase*2;
-	}
-	.home {
-		padding-left: -55px;
-		list-style: none;
-		li a:hover {
-			font-size: 40px;
-			background-color: $gray-bck;
-			color: $black;
-			position: absolute;
-			margin-top: -17px;
-		}
-		li a:before {
-			content: "";
-			display: block;
-			position: absolute;
-			margin-left: -70px;
-			margin-top: -15px;
-			width: 100px;
-			height: 60px;
-			background: transparent url(../img/icon-me.svg) no-repeat;
-		}
-		li a:hover:before {
-			margin-left: -81px;
-			margin-top: -13px;
-			height: 80px;
-			background: transparent url(../img/icon-me-hi.svg) no-repeat;
-		}
-	}
-	.link-home {
-		li a:hover {
-			font-size: 40px;
-			background-color: $gray-bck;
-			color: $black;
-			position: absolute;
-			margin-top: -17px;
-		}
-		li a:before {
-			content: "";
-			display: block;
-			position: absolute;
-			margin-left: -60px;
-			margin-top: -8px;
-			width: 100px;
-			height: 60px;
-			background: transparent url(../img/flecha.svg) no-repeat;
-		}
-		li a:hover:before {
-			margin-top: 9px;
-		}
-	}
-	@include respond-to(handhelds){
-		font-size: $p-small-size;
-		margin: $ubase*3 0;
-		.home {
-			text-align: center;
-			margin-bottom: $ubase*2;
-		}
-		.home, .link-home {
-			li a:hover {
-				font-size: $p-small-size;
-				margin: 0;
-				position: inherit;
-			}
-			li a:before {
-				background: none;
-				width: auto;
-				height: auto;
-				margin: 0;
-				position: inherit;
-			}
-			li a:hover:before {
-				margin: 0;
-				height: auto;
-				background: none;
-			}
-		}
-		.links-nav {
-			@include brown-link;
-			display: flex;
-			display: -webkit-flex;
-			border-bottom: 1px solid $gray-a;
-			padding-bottom: $ubase*3;
-			li {
-				margin: 0 auto;
-				a {
-			    	padding: $ubase;
-				}	
-			}
-		}
-	}
+.background {
+  background: $light-gray;
+  font-size: $p-size;
 }
 
+h1, h2, h3, h4 {
+  font-family: $serif;
+  font-weight: 400;
+}
 
+h1 { font-size: $h1; font-style: italic; line-height: 110%; }
+h2 { font-size: $h2; font-style: italic; line-height: 100%; }
+h3 { font-size: $h3; font-style: italic; line-height: 100%; }
+h4 { font-size: $h4; font-style: italic; line-height: 100%; }
 
-.article-post {
-	h1, h2, h3 {
-		font-family: $serif;
-		line-height: 110%;
-		padding: 0;
-		margin: 0;
-		@include black-link;
-		color: $black;
-		a {
-			color: $black;
-			font-weight: 900;
-		}
-	}
-	.main-illustration {
-		margin-bottom: $ubase*9;
-	}
-	.info-post {
-		margin-top: $ubase*2;
-		font-size: $p-info;
-		line-height: 22px;
-		font-weight: bold;
-		.type-post {
-			margin-left: $ubase/2;
-			padding: $ubase/2;
-			color: $brown;
-			&:hover {
-				color: $gray-bck;
-				background-color: $brown;
-			}
-		}
-	}
-	@include respond-to(handhelds){
-		h1 { font-size: $h1-m; }
-		h2 { font-size: $h2-m; }
-		h3 { font-size: $h3-m; }
-		.main-illustration {
-			margin-bottom: $ubase*2;
-		}
-		.info-post {
-			margin-top: $ubase;
-			font-size: $p-info-m;
-		}
-	}
+a {
+  color: $brown;
+  text-decoration: none;
+  font-style: normal;
+  &:hover {
+    color: yellow;
+  }
+}
+
+.personal-info {
+  padding: 20*$ubase 0 13*$ubase;
+  h1 {
+    margin: 0 0 $ubase;
+  }
+  span {
+    font-family: $serif;
+    font-size: $h4;
+    font-style: italic;
+  }
+  p {
+    margin: 5*$ubase 0;
+  }
+  a {
+    font-size: 20px;
+  }
+}
+
+.writings, .works {
+  h4 {
+    font-style: normal;
+  }
+  h3 {
+    margin: 0;
+  }
+  .title-section {
+    margin-top: 7*$ubase;
+  }
+  .writing-post, .work-post {
+    margin: 4*$ubase 0 0;
+    h4 {
+      margin: 0 0 $ubase;
+    }
+  }
+  .writing-post {
+    p {
+      margin: 2*$ubase 0;
+      font-size: $p-size;
+    }
+    time {
+      font-size: $p-small-size;
+      color: $regular-gray;
+    }
+  }
+  .work-post {
+    .made-with {
+      font-size: $p-small-size;
+      color: $regular-gray;
+    }
+  }
+}
+
+.border-bottom {
+  padding-bottom: 7*$ubase;
+  border-bottom: 1px solid $mid-gray;
+}
+
+.border-top {
+  padding-top: 3*$ubase;
+  border-top: 1px solid $mid-gray;
+}
+
+.final-section {
+  padding-bottom: 15*$ubase;
+}
+
+.header-post {
+  margin-bottom: 5*$ubase;
+  h1 {
+    margin: 2*$ubase 0;
+  }
+  time {
+    font-size: $p-small-size;
+    color: $regular-gray;
+  }
 }
 
 .content-post {
-	color: $black;
-	margin: $ubase*4 0;
-	font-size: $p-size;
-	line-height: 170%;
-	@include brown-link;
-	p {
-		margin: 0 0 $ubase*5 0;
-	}
-	h2, h3, h4 {
-		color: $black;
-		margin: $ubase*7 0 $ubase*4 0;
-	}
-	img {
-		margin-top: $ubase;
-		margin-bottom: $ubase*4;
-	}
-	.border {
-		border: $ubase solid white;
-	}
-	blockquote {
-		color: $black;
-		margin: $ubase*6 0;
-		p {
-			font-family: $serif;
-			font-size: $h4;
-			line-height: 150%;
-			font-style: italic;
-			margin-bottom: $ubase/2;
-			a {
-				font-weight: 100;
-			}
-		}
-		span {
-			font-size: $p-info;
-			font-weight: bold;
-		}
-	}
-	@include respond-to(handhelds) {
-		font-size: $p-small-size;
-		p {
-			margin: 0 0 $ubase*3 0;
-		}
-		h2 { font-size: $h2-m; }
-		h3 { font-size: $h3-m; }
-		h4 { font-size: $h4-m; }
-		h5 { font-size: $h5-m; }
-		h2, h3, h4 {
-			margin: $ubase*4 0 $ubase*3 0;
-			line-height: 130%;
-		}
-		blockquote {
-			margin: $ubase*3 0;
-			p {
-				font-size: $h5-m;
-				line-height: 130%;
-			}
-			span {
-				font-size: $p-info-m;
-			}
-		}
-	}
+  padding-bottom: 7*$ubase;
+  blockquote {
+    font-size: $h5;
+    margin-top: 7*$ubase;
+    margin-bottom: 7*$ubase;
+    span {
+      font-size: $p-small-size;
+    }
+  }
 }
 
-.references {
-	border-top: 1px solid $gray;
-	border-bottom: 1px solid $gray;
-	font-size: $p-small-size;
-	font-weight: 600;
-	padding: $ubase*5 0;
-	@include brown-link;
-	ul li {
-		list-style-type: decimal;
-		margin-bottom: $ubase;
-		margin-left: $ubase*2;
-	}
-	h4 {
-		margin: 0 0 $ubase*3;
-	}
-	@include respond-to(handhelds) {
-		font-size: $p-info;
-		padding: $ubase*3 0;
-	}
+.references-post {
+  margin-bottom: 7*$ubase;
+  li {
+    font-size: $p-small-size;
+    list-style-type: disc;
+    margin: $ubase 0;
+  }
 }
 
-.related-posts {
-	@include brown-link;
-	a {
-		display: block;
-	}
-	ul li {
-		margin-bottom: $ubase*2;
-		h5 {
-			margin: 0;
-		}
-	}
+.main-nav {
+  margin-top: 5*$ubase;
+  margin-bottom: 5*$ubase;
+  a {
+    font-family: $serif;
+    font-style: italic;
+  }
 }
 
-.works-list {
-	.work-item {
-		background-color: $gray-bck;
-		border: $ubase solid white;
-		margin-bottom: $ubase*8;
-		padding: 0;
-		defs text {
-			font-family: $serif;
-			font-style: italic;
-			font-size: $h1; line-height: 110%; font-weight: 900;
-			word-wrap: break-word;
-			width: 100px;
-		}
-		h1 {
-			margin: $ubase*10 0 0 0;
-		}
-		ul {
-			margin: $ubase*10 0 $ubase*4;
-			li {
-				margin-right: $ubase*2;
-				&:last-child {
-					margin-right: 0; 
-				}
-			}
-		}
-	}
+.main-footer {
+  padding: 3*$ubase 0 7*$ubase;
+  a {
+    color: $regular-gray;
+    font-size: $p-small-size;
+  }
+  li {
+    margin-left: 4*$ubase;
+  }
+  .dribbble:hover {
+    color: #EA4C89;
+  }
+	.linkedin:hover {
+    color: #007BB6;
+  }
+	.quora:hover {
+    color: #A82400
+  }
+  .contact:hover {
+    color: $dark-gray;
+  }
 }
 
-.articles-list {
-	.article-item {
-		padding-bottom: $ubase*6;
-	}
-	@include respond-to(handhelds) {
-		.article-item {
-			padding-bottom: $ubase*4;
-		}
-	}
-}
+// Screens
+// Small only
+@media screen and (max-width: 39.9375em) {
+  h1 { font-size: $h2; }
+  h2 { font-size: $h3; }
+  h3 { font-size: $h4; }
+  h4 { font-size: $h5; }
 
-.work-post {
-	@include brown-link;
-	h1 {
-		margin: 0;
-	}
-	.gallery {
-		margin: 0;
-		figcaption {
-			padding: $ubase*8 $ubase*10;
-			background-color: white;
-			margin-bottom: $ubase*3;
-			p {
-				margin: 0 0 $ubase*3 0;
-				line-height: 170%;
-			}
-		}
-		img {
-			margin-bottom: $ubase*4;
-			border: $ubase solid white;
-		}
-	}
-	.content-post {
-		font-size: $p-small-size;
-		line-height: 170%;
-		.info-related {
-			font-weight: bold;
-			strong {
-				color: $black;
-			}
-			aside {
-				margin-top: $ubase*3;
-				padding-top: $ubase*3;
-				border-top: 1px solid $black;
-				h5 {
-					margin: 0 0 $ubase*2 0;
-				}
-			}
-		}
-	}
-	@include respond-to(handhelds) {
-		.gallery {
-			figcaption {
-				padding: $ubase*3;
-				margin-bottom: $ubase*2;
-			}
-			img {
-				margin-bottom: $ubase*2;
-			}
-		}
-		.content-post {
-			.info-related {
-				margin-botton: $ubase*4;
-				aside {
-					margin-top: $ubase*2;
-					padding-top: $ubase*2;
-				}
-			}
-		}
-	}
-}
+  .personal-info {
+    padding: 10*$ubase 0 5*$ubase;
+    p {
+      font-size: $p-size;
+      margin: 3*$ubase 0;
+    }
+  }
 
-.about-me {
-	margin-top: 0;
-	h1, h2, h3 {
-		margin: 0 0 $ubase*3 0;
-	}
-	img {
-		margin: 0;
-	}
-	.info-about {
-		padding-left: $ubase*3;
-		.projects {
-			margin-top: $ubase*7; 
-		}
-	}
-	@include respond-to(handhelds) {
-		.info-about {
-			margin-top: $ubase*3;
-			padding-left: 0;
-			.projects {
-				margin-top: $ubase*3; 
-			}
-		}	
-	}
-}
+  .writings, .works {
+    .writing-post, .work-post {
+      margin: 3*$ubase 0;
+    }
+  }
 
-.svg-mask {
-	clip-path: url(#text-path);
-	-webkit-clip-path: url(#text-path);
-}
+  .final-section {
+    padding-bottom: 10*$ubase;
+  }
 
-.footer {
-	margin: $ubase*5 0;
-	font-size: $p-info;
-	font-weight: bold;
-	a {
-		padding: $ubase $ubase+5;
-	}
-	.language {
-		@include brown-link;
-	}
-	.contact ul li {
-		margin-right: $ubase*3;
-	}
-	.networks ul li {
-		.dribbble { color: $brown; &:hover { color: white; background-color: #EA4C89 } }
-		.linkedin { color: $brown; &:hover { color: white; background-color: #007bb6 } }
-		.quora { color: $brown; &:hover { color: white; background-color: #A82400 } }
-	}
-	@include respond-to(handhelds){
-		margin: $ubase*3 0;
-		.networks {
-			margin-top: $ubase*2;
-			ul {
-				display: flex;
-				display: -webkit-flex;
-			}
-		}
-		.contact {
-			padding-top: $ubase*3;
-			border-top: 1px solid $gray-a;
-		}
-		.contact ul li, .networks ul li, .language {
-			margin: 0 auto $ubase;
-			text-align: center;
-			// float: none;
-		}
-	}
+  .main-footer {
+    li {
+      margin-left: 2*$ubase;
+    }
+  }
+
+  .main-nav {
+    margin-top: 3*$ubase;
+    margin-bottom: $ubase;
+  }
+
+  .header-post {
+    margin-bottom: $ubase;
+  }
+
+  .content-post {
+    padding-bottom: 3*$ubase;
+    blockquote {
+      font-size: $p-size;
+      margin: 3*$ubase 0;
+    }
+  }
+
+  .references-post {
+    margin-bottom: 3*$ubase;
+    li {
+      margin: $ubase 2*$ubase;
+    }
+  }
+
 }
