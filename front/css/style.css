@@ -10,6 +10,9 @@ ul, li {
   padding: 0;
   margin: 0; }
 
+figure {
+  margin: 0; }
+
 .background {
   background: #F0F0F0;
   font-size: 20px; }
@@ -20,22 +23,22 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 70px;
-  font-style: italic;
+  font-style: regular;
   line-height: 110%; }
 
 h2 {
   font-size: 50px;
-  font-style: italic;
+  font-style: regular;
   line-height: 100%; }
 
 h3 {
   font-size: 40px;
-  font-style: italic;
+  font-style: regular;
   line-height: 100%; }
 
 h4 {
   font-size: 26px;
-  font-style: italic;
+  font-style: regular;
   line-height: 100%; }
 
 a {
@@ -44,6 +47,9 @@ a {
   font-style: normal; }
   a:hover {
     color: yellow; }
+
+.first-p {
+  margin-top: 0; }
 
 .personal-info {
   padding: 200px 0 130px; }
@@ -96,6 +102,16 @@ a {
   .header-post time {
     font-size: 16px;
     color: #AAAAAA; }
+  .header-post .info-work {
+    margin-top: 30px; }
+    .header-post .info-work li {
+      font-size: 16px; }
+    .header-post .info-work h4 {
+      margin: 20px 0; }
+    .header-post .info-work .description {
+      margin-bottom: 30px; }
+    .header-post .info-work .partners {
+      margin-bottom: 70px; }
 
 .content-post {
   padding-bottom: 70px; }
@@ -103,8 +119,19 @@ a {
     font-size: 23px;
     margin-top: 70px;
     margin-bottom: 70px; }
+    .content-post blockquote p {
+      font-family: "Playfair Display";
+      font-style: italic;
+      font-size: 26px;
+      margin-bottom: 10px; }
+    .content-post blockquote a {
+      font-style: italic; }
     .content-post blockquote span {
       font-size: 16px; }
+  .content-post .gallery figcaption {
+    padding: 80px 100px; }
+  .content-post .gallery img {
+    margin: 20px 0; }
 
 .references-post {
   margin-bottom: 70px; }
@@ -176,6 +203,8 @@ a {
     .content-post blockquote {
       font-size: 20px;
       margin: 30px 0; }
+    .content-post .gallery figcaption {
+      padding: 0; }
 
   .references-post {
     margin-bottom: 30px; }
