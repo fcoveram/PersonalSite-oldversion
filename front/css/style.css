@@ -74,6 +74,8 @@ figure {
     color: #000; }
   .personal-info p {
     margin: 50px 0; }
+  .personal-info a {
+    font-size: 1.25rem; }
 
 .writings h3, .works h3 {
   font-style: italic; }
@@ -149,14 +151,14 @@ figure {
     margin: 20px 0; }
 
 .references-post {
-  margin-bottom: 70px; }
+  margin-bottom: 100px; }
   .references-post li {
     font-size: 1rem;
     list-style-type: disc;
     margin: 10px 0; }
 
 .main-nav {
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin-top: 50px;
   margin-bottom: 50px; }
   .main-nav a {
@@ -179,6 +181,9 @@ figure {
   .main-footer .contact:hover {
     color: #505050; }
 
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .content-post .gallery figcaption {
+    padding: 0; } }
 @media screen and (max-width: 39.9375em) {
   h1 {
     font-size: 3rem;
@@ -213,8 +218,10 @@ figure {
   .final-section {
     padding-bottom: 100px; }
 
-  .main-footer li {
-    margin-left: 20px; }
+  .main-footer {
+    font-size: 1rem; }
+    .main-footer li {
+      margin-left: 20px; }
 
   .main-nav {
     margin-top: 30px;
@@ -224,17 +231,18 @@ figure {
     margin-bottom: 10px; }
 
   .content-post {
-    padding-bottom: 30px; }
+    padding-bottom: 10px; }
     .content-post blockquote {
       margin: 30px 0; }
       .content-post blockquote p {
-        font-size: 1rem;
-        line-height: 2.3rem; }
+        font-size: 1.25rem;
+        line-height: 2.3rem;
+        margin-bottom: 0; }
     .content-post .gallery figcaption {
       padding: 0; }
 
   .references-post {
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
     .references-post li {
       margin: 10px 20px; } }
 

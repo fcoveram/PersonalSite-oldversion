@@ -93,6 +93,9 @@ figure {
   p {
     margin: 5*$ubase 0;
   }
+  a {
+    font-size: $p-size;
+  }
 }
 
 .writings, .works {
@@ -203,7 +206,7 @@ figure {
 }
 
 .references-post {
-  margin-bottom: 7*$ubase;
+  margin-bottom: 10*$ubase;
   li {
     font-size: $p-small-size;
     list-style-type: disc;
@@ -212,7 +215,7 @@ figure {
 }
 
 .main-nav {
-  font-size: $p-small-size;
+  font-size: $p-size;
   margin-top: 5*$ubase;
   margin-bottom: 5*$ubase;
   a {
@@ -245,6 +248,17 @@ figure {
 }
 
 // Screens
+// Medium and up
+@media screen and (min-width: 40em) and (max-width: 63.9375em)  {
+  .content-post {
+    .gallery {
+      figcaption {
+        padding: 0;
+      }
+    }
+  }
+}
+
 // Small only
 @media screen and (max-width: 39.9375em) {
   h1 { font-size: $h2; line-height: 3.7rem; }
@@ -279,6 +293,7 @@ figure {
   }
 
   .main-footer {
+    font-size: $p-small-size;
     li {
       margin-left: 2*$ubase;
     }
@@ -294,23 +309,24 @@ figure {
   }
 
   .content-post {
-    padding-bottom: 3*$ubase;
+    padding-bottom: $ubase;
     blockquote {
       margin: 3*$ubase 0;
       p {
-        font-size: $p-small-size;
+        font-size: $p-size;
         line-height: 2.3rem;
+        margin-bottom: 0;
       }
     }
     .gallery {
-  		figcaption {
-  			padding: 0;
-  		}
+      figcaption {
+        padding: 0;
+      }
     }
   }
 
   .references-post {
-    margin-bottom: 3*$ubase;
+    margin-bottom: 5*$ubase;
     li {
       margin: $ubase 2*$ubase;
     }
