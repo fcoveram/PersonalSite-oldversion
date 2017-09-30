@@ -1,19 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Francisco Vera</title>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
-  <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://use.typekit.net/obk4uws.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-</head>
-<body>
-<!-- <main id="wrapper" role="main"> -->
+<?php get_header(); ?>
 <aside class="row">
   <div class="medium-10 medium-offset-1 large-8 large-offset-0 columns">
     <div class="personal-info">
@@ -79,24 +64,4 @@
       </div>
     </div>
   </aside> <!-- end of works -->
-  <footer class="row medium-10 medium-centered main-footer">
-    <div class="large-6 small-4 columns">
-      <a class="float-left contact" href="#">Contacto</a>
-    </div>
-    <div class="large-6 small-8 columns">
-      <ul>
-        <li class="float-right"><a class="dribbble" href="#">Dribbble</a></li>
-        <li class="float-right"><a class="linkedin" href="#">Linkedin</a></li>
-        <li class="float-right"><a class="quora" href="#">Quora</a></li>
-      </ul>
-    </div>
-  </footer>
-</div> <!-- end of gray background -->
-
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.js"></script>
-  <script src="js/app.js"></script>
-<!-- </main> -->
-</body>
-</html>
+<?php get_footer(); ?>
