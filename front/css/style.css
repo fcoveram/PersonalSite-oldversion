@@ -142,7 +142,7 @@ figure {
     .content-post blockquote p {
       font-style: italic;
       font-size: 1.3rem;
-      line-height: 3rem;
+      line-height: 2.5rem;
       margin-bottom: 10px; }
     .content-post blockquote span {
       font-size: 1rem; }
@@ -206,7 +206,7 @@ figure {
 
   h2 {
     font-size: 1.5rem;
-    line-height: 2.6rem; }
+    line-height: 2.2rem; }
 
   h3 {
     font-size: 1.3rem;
@@ -232,11 +232,13 @@ figure {
       font-size: 1rem; }
 
   .writings h2, .works h2 {
-    margin-bottom: 1.5rem; }
-  .writings h3, .works h3 {
-    line-height: 2.7rem; }
+    margin-bottom: .4rem; }
+  .writings .title-section, .works .title-section {
+    margin-bottom: 30px; }
   .writings .writing-post, .writings .work-post, .works .writing-post, .works .work-post {
     margin: 0 0 30px; }
+  .writings .padding-section, .works .padding-section {
+    padding-top: 20px; }
 
   .final-section {
     padding-bottom: 100px; }
@@ -249,6 +251,8 @@ figure {
   .main-nav {
     margin-top: 30px;
     margin-bottom: 10px; }
+    .main-nav a {
+      font-size: 1rem; }
 
   .header-post {
     margin-bottom: 10px; }

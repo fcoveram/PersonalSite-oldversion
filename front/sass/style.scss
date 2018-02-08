@@ -189,7 +189,7 @@ figure {
     p {
       font-style: italic;
       font-size: $h4;
-      line-height: 3rem;
+      line-height: 2.5rem;
       margin-bottom: $ubase;
     }
     font-size: $h5;
@@ -283,7 +283,7 @@ figure {
 // Small only
 @media screen and (max-width: 39.9375em) {
   h1 { font-size: $h2; line-height: 2.6rem; }
-  h2 { font-size: $h3; line-height: 2.6rem; }
+  h2 { font-size: $h3; line-height: 2.2rem; }
   h3 { font-size: $h4; line-height: 2rem; }
   h4 { font-size: $h5; line-height: 2rem; }
 
@@ -310,13 +310,16 @@ figure {
 
   .writings, .works {
     h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: .4rem;
     }
-    h3 {
-      line-height: 2.7rem;
+    .title-section {
+      margin-bottom: 3*$ubase;
     }
     .writing-post, .work-post {
       margin: 0 0 3*$ubase;
+    }
+    .padding-section {
+      padding-top: 2*$ubase;
     }
   }
 
@@ -336,6 +339,9 @@ figure {
   .main-nav {
     margin-top: 3*$ubase;
     margin-bottom: $ubase;
+    a {
+      font-size: $p-small-size;
+    }
   }
 
   .header-post {
