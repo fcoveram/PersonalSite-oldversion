@@ -1,0 +1,4 @@
+wp-config.php
+htdocs/wp-config.php
+htdocs/wp-content/debug.log
+htdocs/wp-content/db.php
