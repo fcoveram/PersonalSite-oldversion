@@ -82,6 +82,8 @@ figure {
   margin: 0; }
 .writings .title-section, .works .title-section {
   margin-top: 50px; }
+.writings .padding-section, .works .padding-section {
+  padding-top: 50px; }
 .writings .writing-post, .writings .work-post, .works .writing-post, .works .work-post {
   margin: 0 0 30px; }
 .writings .writing-post p, .works .writing-post p {
@@ -153,6 +155,17 @@ figure {
   font-size: 1.25rem;
   margin-top: 50px;
   margin-bottom: 50px; }
+  .main-nav a {
+    width: 100%;
+    position: relative; }
+    .main-nav a:before {
+      content: "";
+      top: 7px;
+      left: -40px;
+      height: 19px;
+      width: 23px;
+      position: absolute;
+      background: url(../img/back-arrow.svg); }
 
 .main-footer {
   padding: 30px 0 70px; }

@@ -105,14 +105,15 @@ figure {
   .title-section {
     margin-top: 5*$ubase;
   }
+  .padding-section {
+    padding-top: 5*$ubase;
+  }
   .writing-post, .work-post {
     margin: 0 0 3*$ubase;
   }
   .writing-post {
     p {
       margin: 0;
-      // font-size: $p-size;
-      // line-height: 1.7rem;
     }
     time {
       font-size: $p-small-size;
@@ -209,6 +210,19 @@ figure {
   font-size: $p-size;
   margin-top: 5*$ubase;
   margin-bottom: 5*$ubase;
+  a {
+    width: 100%;
+    position: relative;
+    &:before {
+      content: "";
+      top: 7px;
+      left: -40px;
+      height: 19px;
+      width: 23px;
+      position: absolute;
+      background: url(../img/back-arrow.svg);
+    }
+  }
 }
 
 .main-footer {
