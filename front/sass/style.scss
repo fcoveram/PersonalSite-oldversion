@@ -84,7 +84,7 @@ figure {
   }
   span {
     font-size: $h4;
-    font-style: italic;
+    font-weight: 700;
     color: #000;
   }
   p {
@@ -222,7 +222,7 @@ figure {
   font-size: $p-size;
   margin-top: 5*$ubase;
   margin-bottom: 5*$ubase;
-  a {
+  .btn-back a {
     width: 100%;
     position: relative;
     &:before {
@@ -234,6 +234,10 @@ figure {
       position: absolute;
       background: url(../img/back-arrow.svg);
     }
+  }
+  .lang-en a {
+    font-size: $p-small-size;
+    color: $regular-gray;
   }
 }
 
@@ -293,7 +297,7 @@ figure {
   }
 
   .personal-info {
-    padding: 10*$ubase 0 5*$ubase;
+    padding: 0 0 5*$ubase;
     h1 {
       margin: 0;
     }
