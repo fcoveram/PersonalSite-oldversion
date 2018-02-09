@@ -238,6 +238,9 @@ figure {
   .lang-en a {
     font-size: $p-small-size;
     color: $regular-gray;
+    &:hover {
+      color: $dark-gray;
+    }
   }
 }
 
@@ -275,6 +278,22 @@ figure {
 // Screens
 // Medium and up
 @media screen and (min-width: 40em) and (max-width: 63.9375em)  {
+
+  h1 { line-height: 2.8rem; }
+  h2 { line-height: 2.5rem; }
+  h3 { line-height: 2.5rem; }
+  h4 { line-height: 2.5rem; }
+
+  .personal-info {
+    padding: 2*$ubase 0 7*$ubase;
+  }
+
+  .writings, .works {
+    h3, h4 {
+      line-height: 2.5rem;
+    }
+  }
+
   .content-post {
     .gallery {
       figcaption {
@@ -282,10 +301,12 @@ figure {
       }
     }
   }
+
 }
 
 // Small only
 @media screen and (max-width: 39.9375em) {
+
   h1 { font-size: $h2; line-height: 2.6rem; }
   h2 { font-size: $h3; line-height: 2.2rem; }
   h3 { font-size: $h4; line-height: 2rem; }
@@ -324,6 +345,9 @@ figure {
     }
     .padding-section {
       padding-top: 2*$ubase;
+    }
+    h3, h4 {
+      line-height: 2rem;
     }
   }
 
