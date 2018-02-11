@@ -15,22 +15,22 @@ h1 {
   line-height: 3rem; }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  line-height: 3rem; }
-
-h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   line-height: 3rem; }
 
-h4 {
+h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   line-height: 3rem; }
 
-h5 {
+h4 {
   font-size: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 3rem; }
+
+h5 {
+  font-size: 1.25rem;
   margin-bottom: 1rem;
   line-height: 2.3rem; }
 
@@ -57,8 +57,7 @@ figure {
   margin: 0; }
 
 .background {
-  background: #F0F0F0;
-  font-size: 1.25rem; }
+  background: #F0F0F0; }
 
 .first-p {
   margin-top: 0; }
@@ -68,20 +67,22 @@ figure {
   .personal-info h1 {
     margin: 0 0 10px; }
   .personal-info span {
-    font-size: 1.5rem;
-    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #000; }
   .personal-info p {
     margin: 30px 0; }
   .personal-info .write-me {
     font-size: 1.25rem; }
 
-.writings h4, .works h4 {
+.writings h3, .writings h4, .works h3, .works h4 {
   line-height: 3.2rem;
   color: inherit;
   margin: 0; }
 .writings .title-section, .works .title-section {
   margin-top: 50px; }
+.writings .padding-section, .works .padding-section {
+  padding-top: 50px; }
 .writings .writing-post, .writings .work-post, .works .writing-post, .works .work-post {
   margin: 0 0 30px; }
 .writings .writing-post p, .works .writing-post p {
@@ -92,6 +93,9 @@ figure {
 .writings .work-post .made-with, .works .work-post .made-with {
   font-size: 1rem;
   color: #AAAAAA; }
+
+.index h2 {
+  color: inherit; }
 
 .border-bottom {
   padding-bottom: 30px;
@@ -123,17 +127,22 @@ figure {
       margin-bottom: 70px; }
       .header-post .info-work .partners li {
         margin-bottom: .35rem; }
+      .header-post .info-work .partners h3 {
+        margin-bottom: 0; }
+      .header-post .info-work .partners h4 {
+        color: inherit;
+        margin: 0; }
 
 .content-post {
   padding-bottom: 70px; }
   .content-post blockquote {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin-top: 70px;
     margin-bottom: 70px; }
     .content-post blockquote p {
       font-style: italic;
-      font-size: 1.5rem;
-      line-height: 3rem;
+      font-size: 1.3rem;
+      line-height: 2.5rem;
       margin-bottom: 10px; }
     .content-post blockquote span {
       font-size: 1rem; }
@@ -153,6 +162,22 @@ figure {
   font-size: 1.25rem;
   margin-top: 50px;
   margin-bottom: 50px; }
+  .main-nav .btn-back a {
+    width: 100%;
+    position: relative; }
+    .main-nav .btn-back a:before {
+      content: "";
+      top: 7px;
+      left: -40px;
+      height: 19px;
+      width: 23px;
+      position: absolute;
+      background: url(../img/back-arrow.svg); }
+  .main-nav .lang-en a {
+    font-size: 1rem;
+    color: #AAAAAA; }
+    .main-nav .lang-en a:hover {
+      color: #505050; }
 
 .main-footer {
   padding: 30px 0 70px; }
@@ -170,24 +195,48 @@ figure {
   .main-footer .contact:hover {
     color: #505050; }
 
+.error-content {
+  padding-bottom: 200px; }
+  .error-content p {
+    font-size: 1.8rem;
+    line-height: 2.7rem; }
+
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  h1 {
+    line-height: 2.8rem; }
+
+  h2 {
+    line-height: 2.5rem; }
+
+  h3 {
+    line-height: 2.5rem; }
+
+  h4 {
+    line-height: 2.5rem; }
+
+  .personal-info {
+    padding: 20px 0 70px; }
+
+  .writings h3, .writings h4, .works h3, .works h4 {
+    line-height: 2.5rem; }
+
   .content-post .gallery figcaption {
     padding: 0; } }
 @media screen and (max-width: 39.9375em) {
   h1 {
-    font-size: 2rem;
-    line-height: 2.6rem; }
-
-  h2 {
     font-size: 1.8rem;
     line-height: 2.6rem; }
 
-  h3 {
+  h2 {
     font-size: 1.5rem;
+    line-height: 2.2rem; }
+
+  h3 {
+    font-size: 1.3rem;
     line-height: 2rem; }
 
   h4 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     line-height: 2rem; }
 
   p {
@@ -195,7 +244,7 @@ figure {
     line-height: 1.8rem; }
 
   .personal-info {
-    padding: 100px 0 50px; }
+    padding: 0 0 50px; }
     .personal-info h1 {
       margin: 0; }
     .personal-info p {
@@ -205,27 +254,35 @@ figure {
     .personal-info .write-me {
       font-size: 1rem; }
 
-  .writings h3, .works h3 {
-    margin-bottom: 1.5rem; }
-  .writings h4, .works h4 {
-    line-height: 2.7rem; }
+  .writings h2, .works h2 {
+    margin-bottom: .4rem; }
+  .writings .title-section, .works .title-section {
+    margin-bottom: 30px; }
   .writings .writing-post, .writings .work-post, .works .writing-post, .works .work-post {
     margin: 0 0 30px; }
+  .writings .padding-section, .works .padding-section {
+    padding-top: 20px; }
+  .writings h3, .writings h4, .works h3, .works h4 {
+    line-height: 2rem; }
 
   .final-section {
     padding-bottom: 100px; }
 
-  .main-footer {
-    font-size: 0.5rem; }
-    .main-footer li {
-      margin-left: 10px; }
+  .main-footer a {
+    font-size: 0.8rem; }
+  .main-footer li {
+    margin-left: 10px; }
 
   .main-nav {
     margin-top: 30px;
     margin-bottom: 10px; }
+    .main-nav a {
+      font-size: 1rem; }
 
   .header-post {
     margin-bottom: 10px; }
+    .header-post .info-work .partners h3, .header-post .info-work .partners h4 {
+      margin-bottom: 10px; }
 
   .content-post {
     padding-bottom: 10px; }
@@ -233,7 +290,7 @@ figure {
       margin: 30px 0; }
       .content-post blockquote p {
         font-size: 1rem;
-        line-height: 2.3rem;
+        line-height: 2rem;
         margin-bottom: 0; }
     .content-post .gallery figcaption {
       padding: 0; }

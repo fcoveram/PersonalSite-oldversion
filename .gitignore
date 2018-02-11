@@ -6,3 +6,4 @@ htdocs/wp-content/db.php
 /vendor/
 htdocs/wp-content/plugins/advanced-custom-fields-pro/
 .env
+/front/node_modules/

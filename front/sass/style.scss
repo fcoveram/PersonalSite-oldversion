@@ -15,13 +15,13 @@ $blue-hover: #00159F;
 $no-serif: "acumin-pro";
 
 $h1: 2.4rem;
-$h2: 2rem;
-$h3: 1.8rem;
-$h4: 1.5rem;
-$h5: 1.3rem;
+$h2: 1.8rem;
+$h3: 1.5rem;
+$h4: 1.3rem;
+$h5: 1.25rem;
 $p-size: 1.25rem;
 $p-small-size: 1rem;
-$p-info: .5rem;
+$p-info: .8rem;
 
 body {
   font-family: $no-serif, sans-serif;
@@ -71,7 +71,6 @@ figure {
 
 .background {
   background: $light-gray;
-  font-size: $p-size;
 }
 
 .first-p {
@@ -85,7 +84,7 @@ figure {
   }
   span {
     font-size: $h4;
-    font-style: italic;
+    font-weight: 700;
     color: #000;
   }
   p {
@@ -97,7 +96,7 @@ figure {
 }
 
 .writings, .works {
-  h4 {
+  h3, h4 {
     line-height: 3.2rem;
     color: inherit;
     margin: 0;
@@ -105,14 +104,15 @@ figure {
   .title-section {
     margin-top: 5*$ubase;
   }
+  .padding-section {
+    padding-top: 5*$ubase;
+  }
   .writing-post, .work-post {
     margin: 0 0 3*$ubase;
   }
   .writing-post {
     p {
       margin: 0;
-      // font-size: $p-size;
-      // line-height: 1.7rem;
     }
     time {
       font-size: $p-small-size;
@@ -124,6 +124,12 @@ figure {
       font-size: $p-small-size;
       color: $regular-gray;
     }
+  }
+}
+
+.index {
+  h2 {
+    color: inherit;
   }
 }
 
@@ -166,6 +172,13 @@ figure {
       li {
         margin-bottom: .35rem;
       }
+      h3 {
+        margin-bottom: 0;
+      }
+      h4 {
+        color: inherit;
+        margin: 0;
+      }
     }
   }
 }
@@ -176,7 +189,7 @@ figure {
     p {
       font-style: italic;
       font-size: $h4;
-      line-height: 3rem;
+      line-height: 2.5rem;
       margin-bottom: $ubase;
     }
     font-size: $h5;
@@ -186,13 +199,16 @@ figure {
       font-size: $p-small-size;
     }
   }
-  .gallery {
-		figcaption {
-			padding: $ubase*8 $ubase*10;
-		}
-		img {
-			margin: $ubase*2 0;
-		}
+  .post-work__second-half {
+    margin-top: -50px;
+    padding: $ubase*8 $ubase*10;
+    padding-top: 0;
+    img {
+      margin: $ubase*2 -100px;
+      width: auto;
+      height: auto;
+      max-width: 970px;
+    }
   }
 }
 
@@ -209,6 +225,26 @@ figure {
   font-size: $p-size;
   margin-top: 5*$ubase;
   margin-bottom: 5*$ubase;
+  .btn-back a {
+    width: 100%;
+    position: relative;
+    &:before {
+      content: "";
+      top: 3px;
+      left: -40px;
+      height: 19px;
+      width: 23px;
+      position: absolute;
+      background: url(../img/back-arrow.svg);
+    }
+  }
+  .lang-en a {
+    font-size: $p-small-size;
+    color: $regular-gray;
+    &:hover {
+      color: $dark-gray;
+    }
+  }
 }
 
 .main-footer {
@@ -234,9 +270,33 @@ figure {
   }
 }
 
+.error-content {
+  padding-bottom: 20*$ubase;
+  p {
+    font-size: $h2;
+    line-height: 2.7rem;
+  }
+}
+
 // Screens
 // Medium and up
 @media screen and (min-width: 40em) and (max-width: 63.9375em)  {
+
+  h1 { line-height: 2.8rem; }
+  h2 { line-height: 2.5rem; }
+  h3 { line-height: 2.5rem; }
+  h4 { line-height: 2.5rem; }
+
+  .personal-info {
+    padding: 2*$ubase 0 7*$ubase;
+  }
+
+  .writings, .works {
+    h3, h4 {
+      line-height: 2.5rem;
+    }
+  }
+
   .content-post {
     .gallery {
       figcaption {
@@ -244,12 +304,14 @@ figure {
       }
     }
   }
+
 }
 
 // Small only
 @media screen and (max-width: 39.9375em) {
+
   h1 { font-size: $h2; line-height: 2.6rem; }
-  h2 { font-size: $h3; line-height: 2.6rem; }
+  h2 { font-size: $h3; line-height: 2.2rem; }
   h3 { font-size: $h4; line-height: 2rem; }
   h4 { font-size: $h5; line-height: 2rem; }
 
@@ -259,7 +321,7 @@ figure {
   }
 
   .personal-info {
-    padding: 10*$ubase 0 5*$ubase;
+    padding: 0 0 5*$ubase;
     h1 {
       margin: 0;
     }
@@ -275,14 +337,20 @@ figure {
   }
 
   .writings, .works {
-    h3 {
-      margin-bottom: 1.5rem;
+    h2 {
+      margin-bottom: .4rem;
     }
-    h4 {
-      line-height: 2.7rem;
+    .title-section {
+      margin-bottom: 3*$ubase;
     }
     .writing-post, .work-post {
       margin: 0 0 3*$ubase;
+    }
+    .padding-section {
+      padding-top: 2*$ubase;
+    }
+    h3, h4 {
+      line-height: 2rem;
     }
   }
 
@@ -291,7 +359,9 @@ figure {
   }
 
   .main-footer {
-    font-size: $p-info;
+    a {
+      font-size: $p-info;
+    }
     li {
       margin-left: $ubase;
     }
@@ -300,10 +370,20 @@ figure {
   .main-nav {
     margin-top: 3*$ubase;
     margin-bottom: $ubase;
+    a {
+      font-size: $p-small-size;
+    }
   }
 
   .header-post {
     margin-bottom: $ubase;
+    .info-work {
+      .partners {
+        h3, h4 {
+          margin-bottom: $ubase;
+        }
+      }
+    }
   }
 
   .content-post {
@@ -312,13 +392,17 @@ figure {
       margin: 3*$ubase 0;
       p {
         font-size: $p-small-size;
-        line-height: 2.3rem;
+        line-height: 2rem;
         margin-bottom: 0;
       }
     }
-    .gallery {
-      figcaption {
-        padding: 0;
+
+    .post-work__second-half {
+      padding: 0;
+      img {
+        margin: 2*$ubase 0;
+        width: 100%;
+        height: auto;
       }
     }
   }
