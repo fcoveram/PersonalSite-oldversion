@@ -21,3 +21,18 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<nav class="row main-nav">
+	<?php if ( ! is_front_page() ) : ?>
+	<div class="small-6 medium-5 medium-offset-1 large-6 large-offset-0 columns">
+    	<div class="float-left btn-back">
+      		<a href="<?php echo site_url('/'); ?>">Inicio</a>
+    	</div>
+	  </div>
+	<?php endif; ?>
+	<!-- <div class="small-6 medium-5 large-6 large-offset-0 columns end">
+		<div class="float-right lang-en">
+      		<a href="#">English</a>
+    	</div>
+  	</div> -->
+</nav>

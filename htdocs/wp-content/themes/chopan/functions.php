@@ -91,7 +91,7 @@ add_action( 'after_setup_theme', 'chopan_setup' );
  * @global int $content_width
  */
 function chopan_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'chopan_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'chopan_content_width', 970 );
 }
 add_action( 'after_setup_theme', 'chopan_content_width', 0 );
 
@@ -120,7 +120,10 @@ function chopan_scripts() {
 
 	wp_enqueue_style( 'chopan-foundation', get_template_directory_uri() .'/css/foundation.css', array(), '6.4.2', 'screen' );
 	// wp_enqueue_style( 'chopan-app', get_template_directory_uri() .'/css/app.css', array(), '6.4.2', 'screen' );
-	wp_enqueue_style( 'chopan-style', get_template_directory_uri() .'/css/style.css', array('chopan-foundation'), '6.4.2', 'screen' );
+
+	$files_versions = json_decode( file_get_contents( __DIR__ .'/dist/manifest.json' ) );
+
+	wp_enqueue_style( 'chopan-style', $files_versions->{'dist/global.css'}, array('chopan-foundation'), '6.4.2', 'screen' );
 
 	// wp_enqueue_script( 'chopan-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -177,3 +180,27 @@ add_filter('nav_menu_css_class', function( array $classes, WP_Post $item, stdCla
 	$classes[] = 'float-right';
 	return $classes;
 }, 10, 4);
+
+function chopan_portfolio_content( $chunk = 0 ) {
+	global $post;
+	$content = $post->post_content;
+	$separators = ['/<a.*><img/', '/<img/', '/\[gallery/'];
+	$first_img_index = false;
+	foreach ( $separators as $separator ) {
+		$found = preg_match( $separator, $content, $matches );
+		if ( $found === 1 ) {
+			$first_img_index = strpos( $content, $matches[0] );
+			break;
+		}
+	}
+	if ( $first_img_index !== false ) {
+		if ( $chunk === 0 ) {
+			$content_chunk = substr( $content, 0, $first_img_index );
+		} else {
+			$content_chunk = substr( $content, $first_img_index );
+		}
+	} else {
+		$content_chunk = $content;
+	}
+	echo apply_filters('the_content', $content_chunk);
+}

@@ -10,7 +10,7 @@
  */
 
 ?>
-<footer class="row medium-10 medium-centered main-footer">
+<footer class="row medium-10 medium-centered main-footer<?php echo ! is_front_page() ? ' border-top' : ''; ?>">
 	<div class="large-6 small-3 columns">
 		<a class="float-left contact" href="mailto:<?php echo antispambot( get_bloginfo('admin_email') ); ?>">Contacto</a>
 	</div>

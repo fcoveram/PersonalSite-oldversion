@@ -8,11 +8,6 @@
  */
 the_post();
 get_header(); ?>
-<nav class="row main-nav">
-  <div class="medium-10 medium-offset-1 large-12 large-offset-0 columns">
-    <a href="<?php echo site_url('/'); ?>">Inicio</a>
-  </div>
-</nav>
 
 <header class="row header-post">
   <div class="medium-10 medium-offset-1 large-10 large-centered columns">
