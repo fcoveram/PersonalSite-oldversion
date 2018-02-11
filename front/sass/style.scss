@@ -199,13 +199,16 @@ figure {
       font-size: $p-small-size;
     }
   }
-  .gallery {
-		figcaption {
-			padding: $ubase*8 $ubase*10;
-		}
-		img {
-			margin: $ubase*2 0;
-		}
+  .post-work__second-half {
+    margin-top: -50px;
+    padding: $ubase*8 $ubase*10;
+    padding-top: 0;
+    img {
+      margin: $ubase*2 -100px;
+      width: auto;
+      height: auto;
+      max-width: 970px;
+    }
   }
 }
 
@@ -393,9 +396,13 @@ figure {
         margin-bottom: 0;
       }
     }
-    .gallery {
-      figcaption {
-        padding: 0;
+
+    .post-work__second-half {
+      padding: 0;
+      img {
+        margin: 2*$ubase 0;
+        width: 100%;
+        height: auto;
       }
     }
   }

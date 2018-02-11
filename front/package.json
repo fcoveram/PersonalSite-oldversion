@@ -1,0 +1,15 @@
+{
+  "name": "chopan-web-personal",
+  "version": "1.0.0",
+  "description": "Portafolio Francisco Vera",
+  "main": "index.js",
+  "repository": "https://github.com/panchovm/web_personal.git",
+  "author": "Francisco Vera",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.17.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6"
+  }
+}
