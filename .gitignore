@@ -7,3 +7,7 @@ htdocs/wp-content/db.php
 htdocs/wp-content/plugins/advanced-custom-fields-pro/
 .env
 /front/node_modules/
+htdocs/wp-content/uploads
+ddbb/
+htdocs/wp-content/plugins/debug-bar/
+htdocs/wp-content/plugins/query-monitor/

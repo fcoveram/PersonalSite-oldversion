@@ -25,11 +25,13 @@ get_header(); ?>
 						<li><?php echo get_field('cliente')['nombre']; ?></li>
 					<?php endif; ?>
 				<?php endif; ?>
-          			<li><?php echo ucwords( date_i18n( 'F, Y', DateTime::createFromFormat('d/m/Y', get_field('fecha') )->format('U') ) ); ?></li>
+				<?php if ( ! empty( get_field('fecha') ) ) : ?>
+					<li><?php echo ucwords( date_i18n( 'F, Y', DateTime::createFromFormat('d/m/Y', get_field('fecha') )->format('U') ) ); ?></li>
+				<?php endif; ?>
         		</ul>
+				<?php if ( get_field('hecho_con') ) : ?>
         		<aside class="partners">
 					<h3>Equipo</h3>
-					<?php if ( get_field('hecho_con') ) : ?>
 					<span class="made-with"><h4><?php the_field('hecho_con') ;?></h4></span>
 					<?php endif; ?>
 					<?php if ( get_field('equipo') ) : ?>
@@ -42,8 +44,8 @@ get_header(); ?>
 							<?php endif; ?>
 						<?php endforeach; ?>
 					</ul>
-					<?php endif; ?>
         		</aside>
+				<?php endif; ?>
       		</div>
       		<div class="small-12 medium-10 medium-offset-1 large-8 large-offset-0 columns end">
 				<?php chopan_portfolio_content( ); ?>
