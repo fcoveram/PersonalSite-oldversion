@@ -202,5 +202,5 @@ function chopan_portfolio_content( $chunk = 0 ) {
 	} else {
 		$content_chunk = $content;
 	}
-	echo apply_filters('the_content', $content_chunk);
+	echo ( $found || $chunk == 0 ) ? apply_filters('the_content', $content_chunk) : '';
 }
