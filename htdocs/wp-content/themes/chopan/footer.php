@@ -23,7 +23,7 @@
 		]); ?>
 	</div>
 </footer>
-<?php if ( is_front_page() ) : ?>
+<?php if ( is_front_page() || is_archive() ) : ?>
 </div> <!-- end of gray background -->
 <?php endif; ?>
 <?php wp_footer(); ?>
