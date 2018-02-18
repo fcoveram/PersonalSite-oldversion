@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.17.1",
+    "@symfony/webpack-encore": "^0.19",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
   }
