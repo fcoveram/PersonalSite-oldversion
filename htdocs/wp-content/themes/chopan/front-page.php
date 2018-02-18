@@ -26,7 +26,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 		<div class="row">
 			<div class="medium-10 medium-centered large-12 columns">
 				<div class="title-section">
-					<h3>Escritos</h3>
+					<h3><?php _ex('Escritos', 'titulo seccion pagina inicio', 'chopan'); ?></h3>
 				</div>
 			</div>
 		</div>
@@ -53,7 +53,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 		<div class="row">
 			<div class="medium-10 medium-centered large-12 columns">
 				<div class="title-section">
-					<h3>Trabajos</h3>
+					<h3><?php _ex('Trabajos', 'titulo seccion pagina inicio', 'chopan'); ?></h3>
 				</div>
 			</div>
 		</div>

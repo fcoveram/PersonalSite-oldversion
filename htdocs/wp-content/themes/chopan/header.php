@@ -26,13 +26,15 @@
 	<?php if ( ! is_front_page() ) : ?>
 	<div class="small-6 medium-5 medium-offset-1 large-6 large-offset-0 columns">
     	<div class="float-left btn-back">
-      		<a href="<?php echo site_url('/'); ?>">Inicio</a>
+      		<a href="<?php echo site_url('/'); ?>"><?php _ex('Inicio', 'link a página inicio', 'chopan'); ?></a>
     	</div>
 	  </div>
 	<?php endif; ?>
-	<!-- <div class="small-6 medium-5 large-6 large-offset-0 columns end">
+	<?php if ( function_exists('pll_the_languages') ) : ?>
+	<div class="small-6 medium-5 large-6 columns end<?php echo is_front_page() ? ' large-offset-6' : 'large-offset-0'; ?>">
 		<div class="float-right lang-en">
-      		<a href="#">English</a>
+			<?php chopan_languages(); ?>
     	</div>
-  	</div> -->
+  	</div>
+	<?php endif; ?>
 </nav>

@@ -204,3 +204,17 @@ function chopan_portfolio_content( $chunk = 0 ) {
 	}
 	echo ( $found || $chunk == 0 ) ? apply_filters('the_content', $content_chunk) : '';
 }
+
+function chopan_languages() {
+	$langs = pll_the_languages([
+		'dropdown' => 0,
+		'show_flags' => 0,
+		'hide_if_empty' => 0,
+		'echo' => 0,
+		'hide_current' => 1,
+		'raw' => 1
+	]);
+	foreach ( $langs as $lang ) {
+		echo "<a href='{$lang['url']}' hreflang='{$lang['locale']}'>{$lang['name']}</a>";
+	}
+}

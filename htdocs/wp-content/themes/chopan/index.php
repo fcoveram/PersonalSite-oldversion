@@ -10,7 +10,7 @@ the_post();
 get_header(); ?>
 <nav class="row main-nav">
   <div class="medium-10 medium-offset-1 large-12 large-offset-0 columns">
-    <a href="<?php echo site_url('/'); ?>">Inicio</a>
+  	<a href="<?php echo site_url('/'); ?>"><?php _ex('Inicio', 'link a página inicio', 'chopan'); ?></a>
   </div>
 </nav>
 
@@ -29,7 +29,7 @@ get_header(); ?>
 <?php if ( get_field('referencias') ) : ?>
 <section class="row references-post border-top">
 	<div class="medium-10 medium-offset-1 large-10 large-centered columns">
-		<h4>Referencias</h4>
+		<h4><?php _ex('Referencias', 'título sección referencias en single post', 'chopan'); ?></h4>
 		<?php the_field('referencias'); ?>
 	</div>
 </section>

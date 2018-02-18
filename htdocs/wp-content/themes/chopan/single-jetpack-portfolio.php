@@ -31,7 +31,7 @@ get_header(); ?>
         		</ul>
 				<?php if ( get_field('hecho_con') ) : ?>
         		<aside class="partners">
-					<h3>Equipo</h3>
+					<h3><?php _ex('Equipo', 'info trabajo portafolio', 'chopan'); ?></h3>
 					<span class="made-with"><h4><?php the_field('hecho_con') ;?></h4></span>
 					<?php endif; ?>
 					<?php if ( get_field('equipo') ) : ?>
