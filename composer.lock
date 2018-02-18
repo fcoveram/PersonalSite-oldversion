@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "343986cbd72fa701c7c568e0f280d5ad",
+    "content-hash": "a5405c7489c7c6ed6dd01ebf2ff428c5",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -248,7 +248,55 @@
             "time": "2016-09-01T10:05:43+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "websharks/wp-i18n-tools",
+            "version": "160908",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websharks/wp-i18n-tools.git",
+                "reference": "51e3a241dacdf34a56bc6999e89cca95885d7824"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websharks/wp-i18n-tools/zipball/51e3a241dacdf34a56bc6999e89cca95885d7824",
+                "reference": "51e3a241dacdf34a56bc6999e89cca95885d7824",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "websharks",
+                    "homepage": "http://websharks-inc.com/",
+                    "role": "company"
+                },
+                {
+                    "name": "jaswsinc",
+                    "homepage": "http://jaswsinc.com/",
+                    "role": "developer"
+                },
+                {
+                    "name": "raamdev",
+                    "homepage": "http://raam.org/",
+                    "role": "developer"
+                }
+            ],
+            "description": "WordPress i18n/translation tools.",
+            "homepage": "https://github.com/websharks/wp-i18n-tools",
+            "keywords": [
+                "gettext",
+                "i18n",
+                "translation",
+                "websharks",
+                "wordpress"
+            ],
+            "time": "2016-09-08T17:23:41+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

@@ -41,5 +41,8 @@
     },
     "require": {
         "advanced-custom-fields/advanced-custom-fields-pro": "5.6.8"
+    },
+    "require-dev": {
+        "websharks/wp-i18n-tools": "160908"
     }
 }
