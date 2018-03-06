@@ -11,33 +11,33 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.4rem;
-  margin-bottom: 2rem;
+  margin: 3.5rem 0 2rem;
   line-height: 3rem; }
 
 h2 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
-  line-height: 3rem; }
+  margin: 3rem 0 1rem;
+  line-height: 2.7rem; }
 
 h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  line-height: 3rem; }
+  margin: 3rem 0 1rem;
+  line-height: 2.5rem; }
 
 h4 {
   font-size: 1.3rem;
-  margin-bottom: 1rem;
-  line-height: 3rem; }
+  margin: 3rem 0 1rem;
+  line-height: 2.3rem; }
 
 h5 {
   font-size: 1.25rem;
-  margin-bottom: 1rem;
+  margin: 3rem 0 1rem;
   line-height: 2.3rem; }
 
 p {
-  margin-bottom: 3rem;
+  margin-bottom: 1.6rem;
   font-size: 1.25rem;
-  line-height: 2.1rem;
+  line-height: 1.9rem;
   letter-spacing: 0em; }
 
 a {
@@ -76,17 +76,19 @@ figure {
     font-size: 1.25rem; }
 
 .writings h3, .writings h4, .works h3, .works h4 {
-  line-height: 3.2rem;
+  line-height: 2.3rem;
   color: inherit;
-  margin: 0; }
+  margin: 0 0 0.5rem; }
 .writings .title-section, .works .title-section {
-  margin-top: 50px; }
+  margin: 50px 0 30px; }
 .writings .padding-section, .works .padding-section {
   padding-top: 50px; }
 .writings .writing-post, .writings .work-post, .works .writing-post, .works .work-post {
   margin: 0 0 30px; }
 .writings .writing-post p, .works .writing-post p {
-  margin: 0; }
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin: 0 0 10px; }
 .writings .writing-post time, .works .writing-post time {
   font-size: 1rem;
   color: #AAAAAA; }
@@ -96,6 +98,9 @@ figure {
 
 .index h2 {
   color: inherit; }
+.index .writing-post p {
+  font-size: 1.25rem;
+  line-height: 1.9rem; }
 
 .border-bottom {
   padding-bottom: 30px;
@@ -116,15 +121,15 @@ figure {
     font-size: 1rem;
     color: #AAAAAA; }
   .header-post .info-work {
-    margin-top: 30px; }
+    margin-top: 20px; }
     .header-post .info-work li {
       font-size: 1rem; }
     .header-post .info-work .description {
-      margin-bottom: 30px; }
+      margin-bottom: 20px; }
       .header-post .info-work .description li {
         margin-bottom: .35rem; }
     .header-post .info-work .partners {
-      margin-bottom: 70px; }
+      margin-bottom: 30px; }
       .header-post .info-work .partners li {
         margin-bottom: .35rem; }
       .header-post .info-work .partners h3 {
@@ -135,21 +140,41 @@ figure {
 
 .content-post {
   padding-bottom: 70px; }
+  .content-post ul {
+    margin-bottom: 1.6rem; }
+    .content-post ul li {
+      font-size: 1.25rem;
+      list-style-type: disc;
+      margin-left: 43px; }
   .content-post blockquote {
     font-size: 1.25rem;
-    margin-top: 70px;
-    margin-bottom: 70px; }
+    margin-top: 40px;
+    margin-bottom: 40px; }
     .content-post blockquote p {
       font-style: italic;
       font-size: 1.3rem;
-      line-height: 2.5rem;
+      line-height: 2.2rem;
       margin-bottom: 10px; }
     .content-post blockquote span {
       font-size: 1rem; }
-  .content-post .gallery figcaption {
-    padding: 80px 100px; }
+  .content-post figure ul li {
+    list-style-type: none;
+    margin-left: 0; }
+  .content-post figure figcaption {
+    margin-top: 10px;
+    font-size: 1rem; }
   .content-post .gallery img {
-    margin: 20px 0; }
+    margin: 30px 0;
+    box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.05); }
+  .content-post .post-work__second-half {
+    margin-top: -50px;
+    padding: 80px 100px;
+    padding-top: 0; }
+    .content-post .post-work__second-half img {
+      margin: 20px -100px;
+      width: auto;
+      height: auto;
+      max-width: 970px; }
 
 .references-post {
   margin-bottom: 100px; }
@@ -161,11 +186,12 @@ figure {
 .main-nav {
   font-size: 1.25rem;
   margin-top: 50px;
-  margin-bottom: 50px; }
-  .main-nav .btn-back a {
+  margin-bottom: 50px;
+  line-height: 1.9rem; }
+  .main-nav .btn-back {
     width: 100%;
     position: relative; }
-    .main-nav .btn-back a:before {
+    .main-nav .btn-back:before {
       content: "";
       top: 7px;
       left: -40px;
@@ -173,27 +199,23 @@ figure {
       width: 23px;
       position: absolute;
       background: url(../img/back-arrow.svg); }
-  .main-nav .lang-en a {
-    font-size: 1rem;
-    color: #AAAAAA; }
-    .main-nav .lang-en a:hover {
-      color: #505050; }
+  .main-nav li {
+    margin-left: 30px; }
+    .main-nav li a {
+      font-size: 1rem;
+      color: #AAAAAA; }
+      .main-nav li a:hover {
+        color: #505050; }
 
 .main-footer {
   padding: 30px 0 70px; }
   .main-footer a {
     color: #AAAAAA;
     font-size: 1rem; }
+    .main-footer a:hover {
+      color: #505050; }
   .main-footer li {
     margin-left: 40px; }
-  .main-footer .dribbble:hover {
-    color: #EA4C89; }
-  .main-footer .linkedin:hover {
-    color: #007BB6; }
-  .main-footer .quora:hover {
-    color: #A82400; }
-  .main-footer .contact:hover {
-    color: #505050; }
 
 .error-content {
   padding-bottom: 200px; }
@@ -206,45 +228,55 @@ figure {
     line-height: 2.8rem; }
 
   h2 {
-    line-height: 2.5rem; }
+    line-height: 2.2rem; }
 
   h3 {
-    line-height: 2.5rem; }
+    line-height: 2.2rem; }
 
   h4 {
-    line-height: 2.5rem; }
+    line-height: 2rem; }
 
   .personal-info {
     padding: 20px 0 70px; }
 
   .writings h3, .writings h4, .works h3, .works h4 {
-    line-height: 2.5rem; }
+    line-height: 2.2rem; }
+
+  .header-post {
+    margin-bottom: 20px; }
 
   .content-post .gallery figcaption {
-    padding: 0; } }
+    padding: 0; }
+
+  .index h2 {
+    margin: 1rem 0; } }
 @media screen and (max-width: 39.9375em) {
   h1 {
     font-size: 1.8rem;
-    line-height: 2.6rem; }
+    line-height: 2.4rem; }
 
   h2 {
     font-size: 1.5rem;
-    line-height: 2.2rem; }
+    margin: 2rem 0 1rem;
+    line-height: 2rem; }
 
   h3 {
     font-size: 1.3rem;
-    line-height: 2rem; }
+    margin: 2rem 0 1rem;
+    line-height: 1.8rem; }
 
   h4 {
     font-size: 1.25rem;
-    line-height: 2rem; }
+    margin: 2rem 0 1rem;
+    line-height: 1.8rem; }
 
   p {
     font-size: 1rem;
-    line-height: 1.8rem; }
+    line-height: 1.6rem;
+    margin-bottom: 1.2rem; }
 
   .personal-info {
-    padding: 0 0 50px; }
+    padding: 20px 0 50px; }
     .personal-info h1 {
       margin: 0; }
     .personal-info p {
@@ -256,14 +288,14 @@ figure {
 
   .writings h2, .works h2 {
     margin-bottom: .4rem; }
+  .writings h3, .writings h4, .works h3, .works h4 {
+    line-height: 1.8rem; }
   .writings .title-section, .works .title-section {
     margin-bottom: 30px; }
   .writings .writing-post, .writings .work-post, .works .writing-post, .works .work-post {
-    margin: 0 0 30px; }
+    margin: 0 0 40px; }
   .writings .padding-section, .works .padding-section {
     padding-top: 20px; }
-  .writings h3, .writings h4, .works h3, .works h4 {
-    line-height: 2rem; }
 
   .final-section {
     padding-bottom: 100px; }
@@ -274,26 +306,36 @@ figure {
     margin-left: 10px; }
 
   .main-nav {
-    margin-top: 30px;
+    font-size: 1rem;
+    margin-top: 20px;
     margin-bottom: 10px; }
-    .main-nav a {
-      font-size: 1rem; }
 
   .header-post {
     margin-bottom: 10px; }
+    .header-post h1 {
+      margin: 10px 0; }
     .header-post .info-work .partners h3, .header-post .info-work .partners h4 {
-      margin-bottom: 10px; }
+      margin: 10px 0; }
 
   .content-post {
     padding-bottom: 10px; }
+    .content-post ul li {
+      font-size: 1rem;
+      margin-left: 20px; }
     .content-post blockquote {
       margin: 30px 0; }
       .content-post blockquote p {
         font-size: 1rem;
-        line-height: 2rem;
+        line-height: 1.7rem;
         margin-bottom: 0; }
-    .content-post .gallery figcaption {
+    .content-post figure figcaption {
+      font-size: 0.8rem; }
+    .content-post .post-work__second-half {
       padding: 0; }
+      .content-post .post-work__second-half img {
+        margin: 20px 0;
+        width: 100%;
+        height: auto; }
 
   .references-post {
     margin-bottom: 50px; }
