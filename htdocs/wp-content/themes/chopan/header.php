@@ -33,7 +33,11 @@
 	<?php if ( function_exists('pll_the_languages') ) : ?>
 	<div class="small-6 medium-5 large-6 columns end<?php echo is_front_page() ? ' large-offset-6' : 'large-offset-0'; ?>">
 		<div class="float-right lang-en">
-			<?php chopan_languages(); ?>
+			<?php wp_nav_menu([
+				'theme_location' => 'header-aux',
+				'container' => null,
+				'fallback_cb' => null,
+			]); ?>
     	</div>
   	</div>
 	<?php endif; ?>

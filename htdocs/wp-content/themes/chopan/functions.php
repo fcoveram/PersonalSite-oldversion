@@ -45,6 +45,7 @@ if ( ! function_exists( 'chopan_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'footer-external' => esc_html__( 'Redes (footer)', 'chopan' ),
+			'header-aux' => esc_html__( 'Auxiliar Header', 'chopan' )
 		) );
 
 		/*
@@ -174,7 +175,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 add_filter('nav_menu_css_class', function( array $classes, WP_Post $item, stdClass $args, int $depth ){
-	if ( $args->theme_location != 'footer-external' ) {
+	if ( $args->theme_location != 'footer-external' && $args->theme_location !== 'header-aux' ) {
 		return $classes;
 	}
 	$classes[] = 'float-right';
@@ -184,7 +185,7 @@ add_filter('nav_menu_css_class', function( array $classes, WP_Post $item, stdCla
 function chopan_portfolio_content( $chunk = 0 ) {
 	global $post;
 	$content = $post->post_content;
-	$separators = ['/<a.*><img/', '/<img/', '/\[gallery/'];
+	$separators = ['/\[caption/', '/<a.*><img/', '/<img/', '/\[gallery/'];
 	$first_img_index = false;
 	foreach ( $separators as $separator ) {
 		$found = preg_match( $separator, $content, $matches );

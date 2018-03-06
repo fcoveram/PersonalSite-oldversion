@@ -17,7 +17,7 @@ get_header(); ?>
 </section>
 
 <div class="background">
-	<div class="works index">
+	<div class="writings index">
 		<div class="row border-bottom padding-section">
 			<div class="medium-10 medium-offset-1 large-12 large-offset-0">
 			<?php
