@@ -31,7 +31,7 @@
 	  </div>
 	<?php endif; ?>
 	<?php if ( function_exists('pll_the_languages') ) : ?>
-	<div class="small-6 medium-5 large-6 columns end<?php echo is_front_page() ? ' large-offset-6' : 'large-offset-0'; ?>">
+	<div class="small-6 medium-5 large-6 columns end<?php echo is_front_page() ? ' small-offset-6' : 'large-offset-0'; ?>">
 		<div class="float-right lang-en">
 			<?php wp_nav_menu([
 				'theme_location' => 'header-aux',
