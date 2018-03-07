@@ -236,7 +236,6 @@ figure {
     margin-top: -50px;
     padding: 0;
     img {
-      margin: $ubase*2 -100px;
       width: auto;
       height: auto;
       max-width: 100%;
@@ -310,6 +309,7 @@ figure {
     .post-work__second-half {
       padding: $ubase*8 $ubase*10;
       img {
+        margin: $ubase*2 -100px;
         max-width: 970px;
       }
     }
