@@ -167,17 +167,20 @@ figure {
   }
   .info-work {
     margin-top: 2*$ubase;
+    h2 {
+      margin-top: 0;
+    }
     li {
       font-size: $p-small-size;
     }
     .description {
-      margin-bottom: 2*$ubase;
+      margin-bottom: 4*$ubase;
       li {
         margin-bottom: .35rem;
       }
     }
     .partners {
-      margin-bottom: 3*$ubase;
+      margin-bottom: 4*$ubase;
       li {
         margin-bottom: .35rem;
       }
@@ -241,6 +244,7 @@ figure {
       width: auto;
       height: auto;
       max-width: 970px;
+      box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.05);
     }
   }
 }
@@ -330,6 +334,12 @@ figure {
   }
 
   .content-post {
+    .post-work__second-half {
+      margin-top: 0;
+      img {
+        margin: 2*$ubase 0;
+      }
+    }
     .gallery {
       figcaption {
         padding: 0;
