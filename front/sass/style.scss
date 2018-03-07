@@ -234,13 +234,12 @@ figure {
   }
   .post-work__second-half {
     margin-top: -50px;
-    padding: $ubase*8 $ubase*10;
-    padding-top: 0;
+    padding: 0;
     img {
       margin: $ubase*2 -100px;
       width: auto;
       height: auto;
-      max-width: 970px;
+      max-width: 100%;
     }
   }
 }
@@ -303,6 +302,17 @@ figure {
   p {
     font-size: $h2;
     line-height: 2.7rem;
+  }
+}
+
+@media screen and (min-width: 63.9376em ) {
+  .content-post {
+    .post-work__second-half {
+      padding: $ubase*8 $ubase*10;
+      img {
+        max-width: 970px;
+      }
+    }
   }
 }
 
@@ -451,6 +461,7 @@ figure {
       padding: 0;
       img {
         margin: 2*$ubase 0;
+        max-width: 100%;
         width: 100%;
         height: auto;
       }
