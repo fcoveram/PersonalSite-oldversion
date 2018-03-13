@@ -42,8 +42,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 	<?php
 		$works = new WP_Query([
 			'post_type'      => 'jetpack-portfolio',
-			'orderby'        => 'menu_order',
-			'order'          => 'ASC',
+			'orderby'        => 'date',
+			'order'          => 'DESC',
 			'posts_per_page' => 900,
 			'post_status'    => 'publish'
 		]);
