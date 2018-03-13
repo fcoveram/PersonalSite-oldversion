@@ -122,14 +122,16 @@ figure {
     color: #AAAAAA; }
   .header-post .info-work {
     margin-top: 20px; }
+    .header-post .info-work h2 {
+      margin-top: 0; }
     .header-post .info-work li {
       font-size: 1rem; }
     .header-post .info-work .description {
-      margin-bottom: 20px; }
+      margin-bottom: 40px; }
       .header-post .info-work .description li {
         margin-bottom: .35rem; }
     .header-post .info-work .partners {
-      margin-bottom: 30px; }
+      margin-bottom: 40px; }
       .header-post .info-work .partners li {
         margin-bottom: .35rem; }
       .header-post .info-work .partners h3 {
@@ -174,7 +176,8 @@ figure {
       margin: 20px -100px;
       width: auto;
       height: auto;
-      max-width: 970px; }
+      max-width: 970px;
+      box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.05); }
 
 .references-post {
   margin-bottom: 100px; }
@@ -245,6 +248,10 @@ figure {
   .header-post {
     margin-bottom: 20px; }
 
+  .content-post .post-work__second-half {
+    margin-top: 0; }
+    .content-post .post-work__second-half img {
+      margin: 20px 0; }
   .content-post .gallery figcaption {
     padding: 0; }
 
