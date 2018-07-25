@@ -220,6 +220,8 @@ figure {
     }
   }
   figure {
+    width: 100% !important;
+    height: auto;
     ul li {
       list-style-type: none;
       margin-left: 0;
@@ -453,6 +455,8 @@ figure {
       }
     }
     figure {
+      width: 100% !important;
+      height: auto;
       figcaption {
         font-size: $p-info;
       }
