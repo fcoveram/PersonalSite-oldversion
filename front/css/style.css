@@ -159,12 +159,15 @@ figure {
       margin-bottom: 10px; }
     .content-post blockquote span {
       font-size: 1rem; }
-  .content-post figure ul li {
-    list-style-type: none;
-    margin-left: 0; }
-  .content-post figure figcaption {
-    margin-top: 10px;
-    font-size: 1rem; }
+  .content-post figure {
+    width: 100% !important;
+    height: auto; }
+    .content-post figure ul li {
+      list-style-type: none;
+      margin-left: 0; }
+    .content-post figure figcaption {
+      margin-top: 10px;
+      font-size: 1rem; }
   .content-post .gallery img {
     margin: 30px 0;
     box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.05); }
@@ -335,8 +338,11 @@ figure {
         font-size: 1rem;
         line-height: 1.7rem;
         margin-bottom: 0; }
-    .content-post figure figcaption {
-      font-size: 0.8rem; }
+    .content-post figure {
+      width: 100% !important;
+      height: auto; }
+      .content-post figure figcaption {
+        font-size: 0.8rem; }
     .content-post .post-work__second-half {
       padding: 0; }
       .content-post .post-work__second-half img {
