@@ -29,7 +29,8 @@
         "bloom-ux/wp-helpers": "dev-master",
         "wpackagist-plugin/jetpack": "^7.0",
         "wpackagist-plugin/wordpress-seo": "^9.5",
-        "wpackagist-plugin/polylang": "^2.5"
+        "wpackagist-plugin/polylang": "^2.5",
+        "doctrine/inflector": "~1.2.0"
     },
     "require-dev": {
         "websharks/wp-i18n-tools": "160908"
