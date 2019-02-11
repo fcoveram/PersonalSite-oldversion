@@ -11,3 +11,9 @@ htdocs/wp-content/uploads
 ddbb/
 htdocs/wp-content/plugins/debug-bar/
 htdocs/wp-content/plugins/query-monitor/
+htdocs/wp-content/plugins/jetpack/
+htdocs/wp-content/plugins/akismet/
+htdocs/wp-content/plugins/polylang/
+htdocs/wp-content/plugins/wordpress-seo/
+htdocs/wp-content/mu-plugins/queulat/
+htdocs/wp-content/mu-plugins/bloom-ux-wp-helpers/
