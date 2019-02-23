@@ -293,12 +293,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/felipelavinz/queulat.git",
-                "reference": "7fae5c29629a0cbebe3ba9da36bb30e9de456f8d"
+                "reference": "5b11d32697ba7b8c5ffb07719528a4caafea2781"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felipelavinz/queulat/zipball/7fae5c29629a0cbebe3ba9da36bb30e9de456f8d",
-                "reference": "7fae5c29629a0cbebe3ba9da36bb30e9de456f8d",
+                "url": "https://api.github.com/repos/felipelavinz/queulat/zipball/5b11d32697ba7b8c5ffb07719528a4caafea2781",
+                "reference": "5b11d32697ba7b8c5ffb07719528a4caafea2781",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                 }
             ],
             "description": "Developers toolset for WordPress",
-            "time": "2019-02-20T20:41:34+00:00"
+            "time": "2019-02-23T15:40:54+00:00"
         },
         {
             "name": "patchwork/utf8",
