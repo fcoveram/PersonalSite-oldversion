@@ -85,9 +85,19 @@ class Jetpack_Portfolio_Metabox extends Metabox {
 	}
 	public function sanitize_data( array $data ) : array {
 		return queulat_sanitizer( $data, [
-			'made_with'                 => [ 'sanitize_text_field', 'strtoupper' ],
+			'made_with'                 => [ 'sanitize_text_field' ],
+			'client_name'               => [ 'sanitize_text_field' ],
+			'client_url'                => [ 'esc_url_raw' ],
 			'equipo.*.team_member_name' => [ 'sanitize_text_field' ],
-			'equipo.*.team_member_url'  => [ 'esc_url_raw' ]
+			'equipo.*.team_member_url'  => [ 'esc_url_raw' ],
+			'project_gallery.*'         => [ 'absint' ],
+			'project_date'              => [ function( $item ){
+				$date = DateTime::createFromFormat( 'Y-m-d', $item );
+				if ( $date ) {
+					return $date->format('Y-m-d');
+				}
+				return null;
+			} ]
 		] );
 	}
 

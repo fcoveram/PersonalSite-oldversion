@@ -78,7 +78,7 @@ class Jetpack_Portfolio_Post_Type extends Post_Type {
 				3 => 'excerpt',
 				4 => 'revisions',
 			],
-			'show_in_rest'          => true,
+			'show_in_rest'          => false,
 			'rest_base'             => false,
 			'rest_controller_class' => false
 		];

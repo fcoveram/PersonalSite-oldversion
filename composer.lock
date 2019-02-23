@@ -293,17 +293,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/felipelavinz/queulat.git",
-                "reference": "3df0e9ac38cc5767a0b1a71b831a229ecd741498"
+                "reference": "7fae5c29629a0cbebe3ba9da36bb30e9de456f8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felipelavinz/queulat/zipball/3df0e9ac38cc5767a0b1a71b831a229ecd741498",
-                "reference": "3df0e9ac38cc5767a0b1a71b831a229ecd741498",
+                "url": "https://api.github.com/repos/felipelavinz/queulat/zipball/7fae5c29629a0cbebe3ba9da36bb30e9de456f8d",
+                "reference": "7fae5c29629a0cbebe3ba9da36bb30e9de456f8d",
                 "shasum": ""
             },
             "require": {
                 "anahkiasen/underscore-php": "^2.0",
                 "composer/installers": "^1.6",
+                "doctrine/inflector": "v1.2.*",
                 "twig/twig": "^2.0"
             },
             "require-dev": {
@@ -312,7 +313,7 @@
                 "phan/phan": "^0.10.3",
                 "phpcompatibility/php-compatibility": "^9.1",
                 "squizlabs/php_codesniffer": "3.*",
-                "wp-coding-standards/wpcs": "^0.14.0"
+                "wp-coding-standards/wpcs": "^2.0"
             },
             "type": "wordpress-muplugin",
             "autoload": {
@@ -335,7 +336,7 @@
                 }
             ],
             "description": "Developers toolset for WordPress",
-            "time": "2019-02-11T17:10:04+00:00"
+            "time": "2019-02-20T20:41:34+00:00"
         },
         {
             "name": "patchwork/utf8",
@@ -590,9 +591,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.7.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/jetpack.7.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -610,9 +609,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/polylang.2.5.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/polylang.2.5.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -630,9 +627,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.5.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
